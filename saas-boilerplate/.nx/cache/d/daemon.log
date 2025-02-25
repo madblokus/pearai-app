@@ -1,0 +1,137 @@
+[NX Daemon Server] - 2025-02-25T14:46:43.551Z - Started listening on: /var/folders/r1/ppywx9896_ngz3_0rttbcbzm0000gn/T/e599adf4033235f5f906/d.sock
+[NX Daemon Server] - 2025-02-25T14:46:43.556Z - [WATCHER]: Subscribed to changes within: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (native)
+[NX Daemon Server] - 2025-02-25T14:46:43.557Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:43.558Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:43.559Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:43.560Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-25T14:46:43.606Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-25T14:46:43.606Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-25T14:46:43.606Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-25T14:46:44.156Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-25T14:46:44.157Z - Time taken for 'total for creating and serializing project graph' 596.053334ms
+[NX Daemon Server] - 2025-02-25T14:46:44.160Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-25T14:46:44.160Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 596. Response time: 4.
+[NX Daemon Server] - 2025-02-25T14:46:44.193Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:44.193Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:44.193Z - Handled HASH_TASKS. Handling time: 11. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:44.193Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.30825000000004366ms
+[NX Daemon Server] - 2025-02-25T14:46:46.768Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:46.769Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:46.769Z - Handled RECORD_OUTPUTS_HASH. Handling time: 66. Response time: 1.
+[NX Daemon Server] - 2025-02-25T14:46:46.769Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:46:46.787Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-25T14:46:46.832Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:46:47.281Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:47.281Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-25T14:46:47.282Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:47.282Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-25T14:46:47.283Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-25T14:46:47.283Z - Time taken for 'total for creating and serializing project graph' 0.42408300000033705ms
+[NX Daemon Server] - 2025-02-25T14:46:47.285Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-25T14:46:47.285Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2025-02-25T14:46:47.300Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:47.300Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:47.300Z - Handled HASH_TASKS. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:47.300Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.17070799999964947ms
+[NX Daemon Server] - 2025-02-25T14:46:47.363Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:47.363Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:47.363Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:47.809Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:47.809Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:47.809Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:47.866Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:46:48.163Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:48.163Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:48.164Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:48.164Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-25T14:46:48.165Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-25T14:46:48.165Z - Time taken for 'total for creating and serializing project graph' 0.3354170000002341ms
+[NX Daemon Server] - 2025-02-25T14:46:48.167Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-25T14:46:48.167Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2025-02-25T14:46:48.180Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:48.180Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:48.180Z - Handled HASH_TASKS. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:48.180Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.18004199999995762ms
+[NX Daemon Server] - 2025-02-25T14:46:48.235Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.235Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.235Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:48.237Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:48.240Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.241Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.241Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-02-25T14:46:48.373Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:48.374Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:48.374Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:48.375Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-25T14:46:48.375Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-25T14:46:48.376Z - Time taken for 'total for creating and serializing project graph' 0.3600409999999101ms
+[NX Daemon Server] - 2025-02-25T14:46:48.378Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-25T14:46:48.378Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2025-02-25T14:46:48.394Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:48.394Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:48.394Z - Handled HASH_TASKS. Handling time: 4. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:48.394Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.19012500000008004ms
+[NX Daemon Server] - 2025-02-25T14:46:48.457Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.457Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.457Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:48.463Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.463Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:48.463Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.117Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.117Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.117Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.118Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.118Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.118Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.120Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.120Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.120Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.163Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.163Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.163Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:46:49.549Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.549Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.549Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.552Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:49.602Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:46:49.676Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:49.677Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-25T14:46:49.677Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-25T14:46:49.678Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-25T14:46:49.679Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-25T14:46:49.679Z - Time taken for 'total for creating and serializing project graph' 0.35187499999938154ms
+[NX Daemon Server] - 2025-02-25T14:46:49.681Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-25T14:46:49.681Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2025-02-25T14:46:49.699Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:49.699Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.16829099999995378ms
+[NX Daemon Server] - 2025-02-25T14:46:49.699Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-25T14:46:49.699Z - Handled HASH_TASKS. Handling time: 5. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.723Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.723Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.723Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.794Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX Daemon Server] - 2025-02-25T14:46:49.794Z - Done responding to the client outputsHashesMatch
+[NX Daemon Server] - 2025-02-25T14:46:49.794Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 70. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.794Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.794Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.794Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.859Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.859Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.859Z - Handled RECORD_OUTPUTS_HASH. Handling time: 64. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.905Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.905Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-25T14:46:49.905Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-25T14:46:49.964Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:47:41.400Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T14:47:41.432Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 740 file(s) deleted
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (sources)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - [WATCHER]: Stopping the watcher for /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate (outputs)
+[NX Daemon Server] - 2025-02-25T14:47:41.433Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"

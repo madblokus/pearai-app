@@ -1,0 +1,87 @@
+{
+  "run": {
+    "command": "nx run-many --target=setup",
+    "startTime": "2025-02-25T14:46:48.394Z",
+    "endTime": "2025-02-25T14:46:49.550Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "core:docker-create-volumes",
+      "target": "docker-create-volumes",
+      "projectName": "core",
+      "hash": "2794935749215319123",
+      "startTime": "2025-02-25T14:46:48.400Z",
+      "endTime": "2025-02-25T14:46:48.457Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "ssm-editor:setup",
+      "target": "setup",
+      "projectName": "ssm-editor",
+      "hash": "14034795232297316577",
+      "startTime": "2025-02-25T14:46:48.458Z",
+      "endTime": "2025-02-25T14:46:48.479Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "core:setup-env",
+      "target": "setup-env",
+      "projectName": "core",
+      "hash": "12044202407083298801",
+      "startTime": "2025-02-25T14:46:48.400Z",
+      "endTime": "2025-02-25T14:46:49.118Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "webapp:setup",
+      "target": "setup",
+      "projectName": "webapp",
+      "hash": "4292058076449282548",
+      "startTime": "2025-02-25T14:46:48.400Z",
+      "endTime": "2025-02-25T14:46:49.120Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "core:setup",
+      "target": "setup",
+      "projectName": "core",
+      "hash": "14234528702415118687",
+      "startTime": "2025-02-25T14:46:49.119Z",
+      "endTime": "2025-02-25T14:46:49.120Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "backend:setup",
+      "target": "setup",
+      "projectName": "backend",
+      "hash": "14326867102379016867",
+      "startTime": "2025-02-25T14:46:48.479Z",
+      "endTime": "2025-02-25T14:46:49.164Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "workers:setup",
+      "target": "setup",
+      "projectName": "workers",
+      "hash": "17903779568228411209",
+      "startTime": "2025-02-25T14:46:49.121Z",
+      "endTime": "2025-02-25T14:46:49.550Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

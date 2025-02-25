@@ -1,0 +1,16 @@
+[2m> [22mpnpm nx docker-create-volumes
+
+
+[2m> [22m[2mnx run[22m core:docker-create-volumes
+
+[2m> [22mnode ./scripts/docker-create-volumes.js
+
+pearai-saas-web-backend-db-data
+
+
+
+
+
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target docker-create-volumes for project core[39m
+
+

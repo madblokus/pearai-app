@@ -1,0 +1,27 @@
+import * as envalid from 'envalid';
+export declare const getRootPath: () => string;
+export declare const ENV_STAGE_LOCAL = "local";
+export declare const IS_CI: boolean;
+export declare const SB_TELEMETRY_DISABLED: boolean;
+export declare const SB_TELEMETRY_DEBUG: boolean;
+export declare const SB_TELEMETRY_URL: any;
+export declare const SB_TELEMETRY_KEY: any;
+export declare function loadVersionEnv(): Promise<string>;
+export declare const disableNxEnvFiles: () => void;
+export declare function validateStageEnv(): Promise<Readonly<{
+    PROJECT_NAME: string;
+    AWS_DEFAULT_REGION: string;
+    COMPOSE_FILE: string;
+    SB_HOSTED_ZONE_ID: string;
+    SB_HOSTED_ZONE_NAME: string;
+    SB_DOMAIN_ADMIN_PANEL: string;
+    SB_DOMAIN_API: string;
+    SB_DOMAIN_WEB_APP: string;
+    SB_DOMAIN_DOCS: string;
+    SB_DOMAIN_CDN: string;
+    SB_BASIC_AUTH: string;
+    COMPOSE_PATH_SEPARATOR: string;
+    SB_CLOUDFRONT_CERTIFICATE_ARN: string;
+    SB_LOAD_BALANCER_CERTIFICATE_ARN: string;
+    SB_CERTIFICATE_DOMAIN: string;
+} & envalid.CleanedEnvAccessors>>;
