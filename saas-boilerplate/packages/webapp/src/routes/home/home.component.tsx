@@ -70,7 +70,7 @@ export const Home = () => {
         defaultMessage: 'Interact with Claude AI through our API integration.',
         id: 'Home / Claude AI / Subtitle',
       }),
-      link: '/claude',  // We'll need to add this route in the routes config
+      link: generateLocalePath(RoutesConfig.claude),
     },
     {
       title: intl.formatMessage({

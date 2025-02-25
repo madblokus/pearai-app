@@ -878,3 +878,21 @@
 [NX Daemon Server] - 2025-02-25T19:44:49.516Z - [REQUEST]: packages/webapp/src/routes/claude/claude.component.tsx
 [NX Daemon Server] - 2025-02-25T19:44:49.516Z - [REQUEST]: 
 [NX Daemon Server] - 2025-02-25T19:44:49.647Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.41329200007021427ms
+[NX Daemon Server] - 2025-02-25T19:48:16.331Z - [WATCHER]: packages/webapp/src/routes/home/home.component.tsx was modified
+[NX Daemon Server] - 2025-02-25T19:48:16.331Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T19:48:22.735Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-25T19:48:22.735Z - [REQUEST]: packages/webapp/src/routes/home/home.component.tsx
+[NX Daemon Server] - 2025-02-25T19:48:22.735Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-25T19:48:22.861Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.22350000031292439ms
+[NX Daemon Server] - 2025-02-25T19:48:38.572Z - [WATCHER]: packages/webapp/src/routes/claude/claude.component.tsx was modified
+[NX Daemon Server] - 2025-02-25T19:48:38.572Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T19:48:44.999Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-25T19:48:44.999Z - [REQUEST]: packages/webapp/src/routes/claude/claude.component.tsx
+[NX Daemon Server] - 2025-02-25T19:48:44.999Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-25T19:48:45.180Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.5691250003874302ms
+[NX Daemon Server] - 2025-02-25T19:52:24.930Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-25T19:52:24.930Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-25T19:52:31.335Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-25T19:52:31.335Z - [REQUEST]: packages/webapp/src/routes/claude/claude.component.tsx,packages/webapp/src/routes/home/home.component.tsx
+[NX Daemon Server] - 2025-02-25T19:52:31.335Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-25T19:52:31.383Z - Time taken for 'Load Nx Plugin: /Users/chris/Documents/GitHub/pearai-app/saas-boilerplate/node_modules/.pnpm/nx@19.0.1_patch_hash=kp7dxlsgbdjha3gqw56znlzome/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.4307500012218952ms

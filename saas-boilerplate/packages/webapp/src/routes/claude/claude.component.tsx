@@ -19,11 +19,13 @@ export const Claude = () => {
   useEffect(() => {
     const fetchModels = async () => {
       try {
+        // Use the full API path
         const res = await fetch('/api/claude/models/', {
           headers: {
             'Content-Type': 'application/json',
-            // Add your authentication headers here
           },
+          // Include credentials to send cookies with the request
+          credentials: 'include',
         });
 
         if (!res.ok) {
@@ -55,11 +57,11 @@ export const Claude = () => {
     setResponse('');
 
     try {
+      // Use the full API path
       const res = await fetch('/api/claude/generate/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Add your authentication headers here
         },
         body: JSON.stringify({
           messages: [
@@ -68,6 +70,8 @@ export const Claude = () => {
           max_tokens: 1000,
           temperature: 0.7,
         }),
+        // Include credentials to send cookies with the request
+        credentials: 'include',
       });
 
       if (!res.ok) {
@@ -140,7 +144,7 @@ export const Claude = () => {
         </div>
 
         <Button type="submit" disabled={loading}>
-          <FormattedMessage defaultMessage="Generate Response" id="Claude / Generate button" />
+          {loading ? 'Generating...' : <FormattedMessage defaultMessage="Generate Response" id="Claude / Generate button" />}
         </Button>
       </form>
 
