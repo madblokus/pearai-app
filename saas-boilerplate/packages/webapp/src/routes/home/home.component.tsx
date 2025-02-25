@@ -63,6 +63,17 @@ export const Home = () => {
     },
     {
       title: intl.formatMessage({
+        defaultMessage: 'Claude AI integration',
+        id: 'Home / Claude AI / Title',
+      }),
+      subtitle: intl.formatMessage({
+        defaultMessage: 'Interact with Claude AI through our API integration.',
+        id: 'Home / Claude AI / Subtitle',
+      }),
+      link: '/claude',  // We'll need to add this route in the routes config
+    },
+    {
+      title: intl.formatMessage({
         defaultMessage: 'Content items',
         id: 'Home / CMD items / Title',
       }),

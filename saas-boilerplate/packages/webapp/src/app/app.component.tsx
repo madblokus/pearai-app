@@ -31,6 +31,7 @@ import { Role } from '../modules/auth/auth.types';
 import { Admin } from '../routes/admin';
 import { PasswordReset } from '../routes/auth/passwordReset';
 import ValidateOtp from '../routes/auth/validateOtp';
+import { Claude } from '../routes/claude';
 import { AnonymousRoute, AuthRoute } from '../shared/components/routes';
 import { ConfirmEmail, Home, Login, Logout, NotFound, Profile, Signup } from './asyncComponents';
 import { LANG_PREFIX, RoutesConfig, TENANT_PREFIX } from './config/routes';
@@ -80,6 +81,7 @@ export const App = () => {
             <Route path={RoutesConfig.crudDemoItem.index} element={<CrudDemoItem routesConfig={RoutesConfig} />} />
             <Route path={RoutesConfig.documents} element={<Documents />} />
             <Route path={RoutesConfig.saasIdeas} element={<SaasIdeas />} />
+            <Route path={RoutesConfig.claude} element={<Claude />} />
           </Route>
 
           <Route element={<AuthRoute />}>
@@ -88,7 +90,7 @@ export const App = () => {
             <Route path={RoutesConfig.tenantInvitation} element={<TenantInvitation />} />
             <Route path="*" element={<NotFound />} />
           </Route>
-          
+
           <Route element={<AuthRoute allowedRoles={Role.ADMIN} />}>
             <Route path={RoutesConfig.admin} element={<Admin />} />
           </Route>

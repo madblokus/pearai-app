@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude API Tester</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .response {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .error {
+            color: #d32f2f;
+            background-color: #ffebee;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Claude API Tester</h1>
+
+    <div class="card">
+        <h2>Authentication</h2>
+        <label for="authToken">Auth Token:</label>
+        <input type="text" id="authToken" placeholder="Enter your authentication token">
+        <p><small>This token will be used for all requests below. Format should match your auth system (e.g., "Bearer your_token_here")</small></p>
+    </div>
+
+    <div class="card">
+        <h2>1. Get Available Models</h2>
+        <p>Test the <code>/api/claude/models/</code> endpoint</p>
+        <button id="getModelsBtn">Get Models</button>
+        <div id="modelsResponse" class="response" style="display: none;"></div>
+    </div>
+
+    <div class="card">
+        <h2>2. Generate Claude Response</h2>
+        <p>Test the <code>/api/claude/generate/</code> endpoint</p>
+
+        <label for="userMessage">Message to Claude:</label>
+        <textarea id="userMessage" rows="4" placeholder="Enter your message to Claude">What's the capital of France?</textarea>
+
+        <label for="maxTokens">Max Tokens:</label>
+        <input type="text" id="maxTokens" value="500">
+
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" value="0.7">
+
+        <button id="generateBtn">Generate Response</button>
+        <div id="generateResponse" class="response" style="display: none;"></div>
+    </div>
+
+    <script>
+        // Configuration
+        const BASE_URL = "http://localhost:5001";
+        const MODELS_ENDPOINT = `${BASE_URL}/api/claude/models/`;
+        const GENERATE_ENDPOINT = `${BASE_URL}/api/claude/generate/`;
+
+        // Get DOM elements
+        const authTokenInput = document.getElementById('authToken');
+        const getModelsBtn = document.getElementById('getModelsBtn');
+        const modelsResponse = document.getElementById('modelsResponse');
+        const userMessageInput = document.getElementById('userMessage');
+        const maxTokensInput = document.getElementById('maxTokens');
+        const temperatureInput = document.getElementById('temperature');
+        const generateBtn = document.getElementById('generateBtn');
+        const generateResponse = document.getElementById('generateResponse');
+
+        // Function to prepare headers with auth token
+        function getHeaders() {
+            const token = authTokenInput.value.trim();
+            if (!token) {
+                throw new Error('Please enter an authentication token');
+            }
+
+            return {
+                'Content-Type': 'application/json',
+                'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`
+            };
+        }
+
+        // Get Models endpoint test
+        getModelsBtn.addEventListener('click', async () => {
+            modelsResponse.style.display = 'block';
+            modelsResponse.innerHTML = 'Loading...';
+
+            try {
+                const headers = getHeaders();
+                const response = await fetch(MODELS_ENDPOINT, {
+                    method: 'GET',
+                    headers: headers
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    modelsResponse.innerHTML = JSON.stringify(data, null, 2);
+                } else {
+                    modelsResponse.innerHTML = `Error (${response.status}):\n${JSON.stringify(data, null, 2)}`;
+                    modelsResponse.classList.add('error');
+                }
+            } catch (error) {
+                modelsResponse.innerHTML = `Error: ${error.message}`;
+                modelsResponse.classList.add('error');
+            }
+        });
+
+        // Generate response endpoint test
+        generateBtn.addEventListener('click', async () => {
+            generateResponse.style.display = 'block';
+            generateResponse.innerHTML = 'Loading...';
+            generateResponse.classList.remove('error');
+
+            try {
+                const headers = getHeaders();
+                const userMessage = userMessageInput.value.trim();
+                const maxTokens = parseInt(maxTokensInput.value) || 500;
+                const temperature = parseFloat(temperatureInput.value) || 0.7;
+
+                if (!userMessage) {
+                    throw new Error('Please enter a message for Claude');
+                }
+
+                const payload = {
+                    messages: [
+                        { role: 'user', content: userMessage }
+                    ],
+                    max_tokens: maxTokens,
+                    temperature: temperature
+                };
+
+                const response = await fetch(GENERATE_ENDPOINT, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    generateResponse.innerHTML = JSON.stringify(data, null, 2);
+                } else {
+                    generateResponse.innerHTML = `Error (${response.status}):\n${JSON.stringify(data, null, 2)}`;
+                    generateResponse.classList.add('error');
+                }
+            } catch (error) {
+                generateResponse.innerHTML = `Error: ${error.message}`;
+                generateResponse.classList.add('error');
+            }
+        });
+    </script>
+</body>
+</html>

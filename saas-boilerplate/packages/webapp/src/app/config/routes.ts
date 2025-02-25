@@ -17,6 +17,7 @@ export const RoutesConfig = {
   ...ContentfulRoutesConfig,
   ...CrudDemoRoutesConfig,
   ...FinancesRoutesConfig,
+  claude: 'claude',
   //<-- INJECT ROUTE DEFINITION -->
 };
 

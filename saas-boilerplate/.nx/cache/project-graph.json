@@ -748,28 +748,6 @@
         "implicitDependencies": []
       }
     },
-    "llm-server": {
-      "name": "llm-server",
-      "type": "lib",
-      "data": {
-        "root": "packages/backend/apps/llm-server",
-        "targets": {
-          "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "executor": "@nx/js:release-publish",
-            "options": {},
-            "configurations": {}
-          }
-        },
-        "sourceRoot": "packages/backend/apps/llm-server",
-        "name": "llm-server",
-        "projectType": "library",
-        "implicitDependencies": [],
-        "tags": []
-      }
-    },
     "webapp-core": {
       "name": "webapp-core",
       "type": "lib",
@@ -35964,7 +35942,6 @@
         "type": "static"
       }
     ],
-    "llm-server": [],
     "webapp-core": [],
     "ssm-editor": [],
     "infra-shared": [
