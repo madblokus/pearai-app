@@ -20,7 +20,7 @@ export const Claude = () => {
     const fetchModels = async () => {
       try {
         // Use the full API path
-        const res = await fetch('/api/claude/models/', {
+        const res = await fetch('/api/claude_api/models/', {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -58,7 +58,7 @@ export const Claude = () => {
 
     try {
       // Use the full API path
-      const res = await fetch('/api/claude/generate/', {
+      const res = await fetch('/api/claude_api/generate/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
