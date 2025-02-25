@@ -67,7 +67,7 @@ LOCAL_APPS = [
     "apps.websockets",
     "apps.integrations",
     "apps.multitenancy",
-    "claude_api",
+    "apps.claude_api",
     "marianai_api",
 ]
 
