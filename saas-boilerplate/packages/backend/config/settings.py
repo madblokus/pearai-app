@@ -68,6 +68,7 @@ LOCAL_APPS = [
     "apps.integrations",
     "apps.multitenancy",
     "claude_api",
+    "marianai_api",
 ]
 
 INSTALLED_APPS = (
@@ -402,3 +403,8 @@ AWS_SES_REGION_NAME = env("AWS_SES_REGION_NAME", default=AWS_REGION)
 
 # If you want to use the SESv2 client
 USE_SES_V2 = True
+
+# MarianAI Integration Settings
+MARIANAI_SERVER_URL = env("MARIANAI_SERVER_URL", default="http://localhost:5001")
+MARIANAI_API_KEY = env("MARIANAI_API_KEY", default=None)
+MARIANAI_MODEL = env("MARIANAI_MODEL", default="default")
