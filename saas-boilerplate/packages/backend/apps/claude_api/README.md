@@ -1,68 +1,59 @@
 # Claude API Integration
 
-This Django app provides an API integration with Anthropic's Claude AI model.
+This folder contains the Claude API integration components that work seamlessly between VSCode extension and the Django server running on localhost:5001.
 
-## Setup
+## Overview
 
-1. Ensure you have the `anthropic` Python package installed:
-```bash
-pip install anthropic
+The Claude API integration consists of multiple components:
+
+- **Client**: Handles communication with the Claude API via the localhost server
+- **Credentials**: Manages authentication and token handling
+- **Utils**: Provides utility functions for formatting prompts and responses
+- **Interface**: Defines TypeScript interfaces for type safety
+
+## Configuration
+
+By default, the client connects to `http://localhost:5001`. You can customize this by setting the `CLAUDE_API_URL` environment variable.
+
+## Usage
+
+### From VSCode Extension
+
+```typescript
+import { createClaudeClient } from 'saas-boilerplate/packages/backend/apps/claude_api';
+
+// Create a client
+const client = await createClaudeClient(undefined, 'your-access-token');
+
+// Get completions
+const response = await client.getCompletions({
+  prompt: 'Tell me a joke',
+  model: 'claude-3-haiku-20240307',
+  temperature: 0.7,
+  max_tokens: 1000
+});
+
+console.log(response.completion);
 ```
 
-2. Configure your environment variables in the `.env` file:
-```
-CLAUDE_API_KEY=your_api_key_here
-CLAUDE_MODEL=claude-3-7-sonnet-20250219  # or your preferred model
-```
+### From Django Server
 
-## API Endpoints
+The Django server can use the same client by installing it as a package or importing the code directly.
 
-### Generate Claude Response
-`POST /api/claude/generate/`
+## Available Models
 
-This endpoint sends a message to Claude and returns the AI's response.
-
-#### Request Format
-```json
-{
-  "messages": [
-    {"role": "user", "content": "Hello, Claude!"}
-  ],
-  "max_tokens": 1000,
-  "temperature": 0.7
-}
-```
-
-#### Response Format
-```json
-{
-  "message": "Hello! I'm Claude, an AI assistant created by Anthropic...",
-  "model": "claude-3-7-sonnet-20250219",
-  "usage": {
-    "input_tokens": 10,
-    "output_tokens": 42
-  }
-}
-```
-
-### Get Available Models
-`GET /api/claude/models/`
-
-Returns information about the available Claude models.
-
-#### Response Format
-```json
-{
-  "available_models": [
-    {
-      "id": "claude-3-7-sonnet-20250219",
-      "name": "claude-3-7-sonnet-20250219",
-      "is_default": true
-    }
-  ]
-}
-```
+- `claude-3-opus-20240229`: Most powerful Claude model for highly complex tasks
+- `claude-3-sonnet-20240229`: Ideal balance of intelligence and speed
+- `claude-3-haiku-20240307`: Fastest and most compact Claude model
 
 ## Authentication
 
-All endpoints require authentication using your SaaS Boilerplate authentication system.
+Authentication is handled via access tokens. The client supports both access tokens and refresh tokens for maintaining persistent authentication.
+
+## Error Handling
+
+The client includes robust error handling for API calls, with detailed error messages and appropriate fallbacks when necessary.
+
+## Extension
+
+To extend or modify this integration, simply update the relevant files. The modular design makes it easy to add new features or models as they become available.

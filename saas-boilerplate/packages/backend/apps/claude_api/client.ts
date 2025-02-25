@@ -11,6 +11,7 @@ import type {
 } from './interface.js';
 
 import { getHeaders } from './utils/headers.js';
+import { formatClaudePrompt, cleanClaudeResponse } from './utils.js';
 
 // Default localhost URL with port 5001
 const DEFAULT_CLAUDE_API_URL = 'http://localhost:5001';
@@ -56,6 +57,15 @@ export class ClaudeClient implements IClaudeClient {
 		const url = new URL('completions', this.url);
 		const headers = await getHeaders();
 
+		// Format the prompt properly for Claude if a system prompt is provided
+		let formattedPrompt = request.prompt;
+		if (request.system_prompt) {
+			formattedPrompt = formatClaudePrompt(
+				request.system_prompt,
+				request.prompt,
+			);
+		}
+
 		try {
 			const response = await fetch(url, {
 				method: 'POST',
@@ -64,7 +74,10 @@ export class ClaudeClient implements IClaudeClient {
 					Authorization: `Bearer ${await this.userToken}`,
 					...headers,
 				},
-				body: JSON.stringify(request),
+				body: JSON.stringify({
+					...request,
+					prompt: formattedPrompt,
+				}),
 			});
 
 			if (!response.ok) {
@@ -75,6 +88,12 @@ export class ClaudeClient implements IClaudeClient {
 			}
 
 			const data = await response.json();
+
+			// Clean up the response if needed
+			if (data.completion) {
+				data.completion = cleanClaudeResponse(data.completion);
+			}
+
 			return data;
 		} catch (e) {
 			console.error('Failed to get completion', e);
@@ -107,10 +126,51 @@ export class ClaudeClient implements IClaudeClient {
 			}
 
 			const data = await response.json();
-			return data.models || [];
+			return (
+				data.models || [
+					{
+						id: 'claude-3-opus-20240229',
+						name: 'Claude 3 Opus',
+						max_tokens: 200000,
+						description: 'Most powerful Claude model for highly complex tasks',
+					},
+					{
+						id: 'claude-3-sonnet-20240229',
+						name: 'Claude 3 Sonnet',
+						max_tokens: 180000,
+						description: 'Ideal balance of intelligence and speed',
+					},
+					{
+						id: 'claude-3-haiku-20240307',
+						name: 'Claude 3 Haiku',
+						max_tokens: 160000,
+						description: 'Fastest and most compact Claude model',
+					},
+				]
+			);
 		} catch (e) {
 			console.error('Failed to get models', e);
-			return [];
+			// Fallback models if the API call fails
+			return [
+				{
+					id: 'claude-3-opus-20240229',
+					name: 'Claude 3 Opus',
+					max_tokens: 200000,
+					description: 'Most powerful Claude model for highly complex tasks',
+				},
+				{
+					id: 'claude-3-sonnet-20240229',
+					name: 'Claude 3 Sonnet',
+					max_tokens: 180000,
+					description: 'Ideal balance of intelligence and speed',
+				},
+				{
+					id: 'claude-3-haiku-20240307',
+					name: 'Claude 3 Haiku',
+					max_tokens: 160000,
+					description: 'Fastest and most compact Claude model',
+				},
+			];
 		}
 	}
 
