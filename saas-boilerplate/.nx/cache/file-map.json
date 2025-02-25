@@ -186,156 +186,160 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".github/images/features/cms.png",
-        "hash": "7003158396802797082"
+        "file": "README.md",
+        "hash": "11177730902058793904"
+      },
+      {
+        "file": "babel.config.json",
+        "hash": "5546405625092116747"
       },
       {
         "file": ".versionrc.js",
         "hash": "2617960276687658221"
       },
       {
-        "file": ".github/images/features/subscriptions.png",
-        "hash": "9785965179178019955"
-      },
-      {
-        "file": "tailwind.workspace-preset.ts",
-        "hash": "11024878233470497544"
-      },
-      {
-        "file": "SECURITY.md",
-        "hash": "5704965359532657457"
-      },
-      {
-        "file": "docker-compose.ci.yml",
-        "hash": "17185954166260445554"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "hash": "16411181500750353378"
-      },
-      {
-        "file": ".github/workflows/status-dashboard.yml",
-        "hash": "18319080748661550703"
-      },
-      {
-        "file": ".lintstagedrc",
-        "hash": "275437508165664555"
-      },
-      {
-        "file": "CODE_OF_CONDUCT.md",
-        "hash": "14371778494719274169"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "16156226223391277625"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/bug_report.yml",
-        "hash": "10195051694741567548"
-      },
-      {
-        "file": "docker-compose.local.yml",
-        "hash": "14542486612696462586"
+        "file": ".dockerignore",
+        "hash": "8023243285235115467"
       },
       {
         "file": "patches/nx@19.0.1.patch",
         "hash": "4704678247169477099"
       },
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "831139700542376288"
+        "file": ".github/workflows/backend.yml",
+        "hash": "14335934327281704648"
       },
       {
         "file": "CONTRIBUTING.md",
         "hash": "7193564160193669463"
       },
       {
-        "file": ".github/images/features/multitenancy.png",
-        "hash": "12140740413996502070"
+        "file": "CODE_OF_CONDUCT.md",
+        "hash": "14371778494719274169"
       },
       {
-        "file": ".github/workflows/docs.yml",
-        "hash": "9862339686249913803"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": ".graphqlconfig",
-        "hash": "10330933711386175094"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "9757919650126762165"
-      },
-      {
-        "file": ".github/workflows/deploy-prod.yml",
-        "hash": "17751758559378082812"
-      },
-      {
-        "file": ".github/workflows/workers.yml",
-        "hash": "9716842596790884499"
-      },
-      {
-        "file": "img.png",
-        "hash": "4150688594547846269"
-      },
-      {
-        "file": ".env.test",
-        "hash": "5018927149438839184"
-      },
-      {
-        "file": ".github/workflows/actions/setup/action.yml",
-        "hash": "13253370325735305346"
-      },
-      {
-        "file": ".github/pull_request_template.md",
-        "hash": "12382669776816351243"
-      },
-      {
-        "file": ".github/images/features/emails.png",
-        "hash": "12640195780727448934"
-      },
-      {
-        "file": ".dockerignore",
-        "hash": "8023243285235115467"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "11715904530383257904"
-      },
-      {
-        "file": ".github/images/features/payments.png",
-        "hash": "1274383807663315501"
-      },
-      {
-        "file": "package.json",
-        "hash": "17187114397828355782"
+        "file": ".github/workflows/actions/deploy/action.yml",
+        "hash": "10455397006976802994"
       },
       {
         "file": ".github/images/saas-bp-logo.png",
         "hash": "12912746602476646306"
       },
       {
-        "file": "README.md",
-        "hash": "11177730902058793904"
+        "file": ".github/workflows/deploy-prod.yml",
+        "hash": "17751758559378082812"
       },
       {
-        "file": "eslint.config.js",
-        "hash": "9350880639636807209"
+        "file": "jest.config.ts",
+        "hash": "17981274922028690832"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16156226223391277625"
+      },
+      {
+        "file": ".github/workflows/workers.yml",
+        "hash": "9716842596790884499"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "831139700542376288"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "10736989266964588500"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "16411181500750353378"
+      },
+      {
+        "file": ".env.test",
+        "hash": "5018927149438839184"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/docs.yml",
+        "hash": "17735307642043913517"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "SECURITY.md",
+        "hash": "5704965359532657457"
+      },
+      {
+        "file": ".github/images/features/emails.png",
+        "hash": "12640195780727448934"
       },
       {
         "file": "nx.json",
         "hash": "2676973267434721067"
       },
       {
-        "file": ".github/workflows/webapp.yml",
-        "hash": "6201064662899900258"
+        "file": ".github/workflows/docs.yml",
+        "hash": "9862339686249913803"
       },
       {
-        "file": "LICENSE",
-        "hash": "10759455907477567288"
+        "file": "pnpm-lock.yaml",
+        "hash": "6805424775265297931"
+      },
+      {
+        "file": ".github/images/features/auth.png",
+        "hash": "278299804156521027"
+      },
+      {
+        "file": ".lintstagedrc",
+        "hash": "275437508165664555"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/config.yml",
+        "hash": "12643274184107067000"
+      },
+      {
+        "file": ".github/workflows/tools.yml",
+        "hash": "16131165575092452518"
+      },
+      {
+        "file": ".github/workflows/actions/setup/action.yml",
+        "hash": "13253370325735305346"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "15884505069578013481"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "11715904530383257904"
+      },
+      {
+        "file": ".github/images/features/multitenancy.png",
+        "hash": "12140740413996502070"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13328050810975745861"
+      },
+      {
+        "file": "tailwind.workspace-preset.ts",
+        "hash": "11024878233470497544"
+      },
+      {
+        "file": ".github/workflows/deploy-qa.yml",
+        "hash": "7053363587530573759"
+      },
+      {
+        "file": ".env.shared",
+        "hash": "13390675942770300162"
+      },
+      {
+        "file": ".github/pull_request_template.md",
+        "hash": "12382669776816351243"
+      },
+      {
+        "file": ".github/workflows/status-dashboard.yml",
+        "hash": "18319080748661550703"
       },
       {
         "file": "jest.preset.js",
@@ -346,72 +350,68 @@
         "hash": "10540521276629331487"
       },
       {
-        "file": ".gitignore",
-        "hash": "13328050810975745861"
+        "file": "docker-compose.local.yml",
+        "hash": "14542486612696462586"
       },
       {
-        "file": ".github/workflows/deploy-qa.yml",
-        "hash": "7053363587530573759"
+        "file": ".github/images/features/payments.png",
+        "hash": "1274383807663315501"
       },
       {
-        "file": ".github/workflows/tools.yml",
-        "hash": "16131165575092452518"
+        "file": "docker-compose.ci.yml",
+        "hash": "17185954166260445554"
       },
       {
-        "file": ".vscode/settings.json",
-        "hash": "10736989266964588500"
+        "file": ".github/workflows/webapp.yml",
+        "hash": "6201064662899900258"
       },
       {
-        "file": ".env.shared",
-        "hash": "13390675942770300162"
+        "file": ".github/images/features/subscriptions.png",
+        "hash": "9785965179178019955"
       },
       {
-        "file": ".github/workflows/backend.yml",
-        "hash": "14335934327281704648"
+        "file": ".github/workflows/infra.yml",
+        "hash": "7580410537893057947"
       },
       {
-        "file": "bitbucket-pipelines.yml",
-        "hash": "3372635193453120544"
+        "file": "LICENSE",
+        "hash": "10759455907477567288"
       },
       {
-        "file": ".github/images/features/auth.png",
-        "hash": "278299804156521027"
-      },
-      {
-        "file": "babel.config.json",
-        "hash": "5546405625092116747"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "17981274922028690832"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/config.yml",
-        "hash": "12643274184107067000"
-      },
-      {
-        "file": ".github/workflows/actions/deploy/action.yml",
-        "hash": "10455397006976802994"
+        "file": "package.json",
+        "hash": "17187114397828355782"
       },
       {
         "file": ".github/ISSUE_TEMPLATE/feature_request.yml",
         "hash": "5362044892491849040"
       },
       {
-        "file": ".github/ISSUE_TEMPLATE/docs.yml",
-        "hash": "17735307642043913517"
+        "file": ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "hash": "10195051694741567548"
       },
       {
-        "file": ".husky/pre-commit",
-        "hash": "15884505069578013481"
+        "file": "eslint.config.js",
+        "hash": "9350880639636807209"
       },
       {
-        "file": "pnpm-lock.yaml",
-        "hash": "6805424775265297931"
+        "file": ".github/images/features/cms.png",
+        "hash": "7003158396802797082"
       },
       {
-        "file": ".github/workflows/infra.yml",
-        "hash": "7580410537893057947"
+        "file": "bitbucket-pipelines.yml",
+        "hash": "3372635193453120544"
+      },
+      {
+        "file": "img.png",
+        "hash": "4150688594547846269"
+      },
+      {
+        "file": ".graphqlconfig",
+        "hash": "10330933711386175094"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9757919650126762165"
       }
     ],
     "projectFileMap": {
@@ -4830,6 +4830,30 @@
         {
           "file": "packages/backend/utils/hashid.py",
           "hash": "1192420279997091020"
+        },
+        {
+          "file": "packages/backend/apps/claude_api/interface.ts",
+          "hash": "4458574953567938623"
+        },
+        {
+          "file": "packages/backend/apps/claude_api/credentials.ts",
+          "hash": "7185262691130471968"
+        },
+        {
+          "file": "packages/backend/apps/claude_api/utils/headers.ts",
+          "hash": "13544216561615033839"
+        },
+        {
+          "file": "packages/backend/apps/claude_api/utils.ts",
+          "hash": "13805084159574976902"
+        },
+        {
+          "file": "packages/backend/apps/claude_api/client.ts",
+          "hash": "2122231757095419853"
+        },
+        {
+          "file": "packages/backend/apps/claude_api/index.ts",
+          "hash": "6953776116426074181"
         }
       ],
       "webapp": [
