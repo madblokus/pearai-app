@@ -1,0 +1,2 @@
+class ClaudeClientException(Exception):
+    pass

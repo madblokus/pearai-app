@@ -67,6 +67,7 @@ LOCAL_APPS = [
     "apps.websockets",
     "apps.integrations",
     "apps.multitenancy",
+    "claude_api",
 ]
 
 INSTALLED_APPS = (
@@ -373,6 +374,10 @@ OTP_VALIDATE_PATH = "/auth/validate-otp"
 
 OPENAI_API_KEY = env("OPENAI_API_KEY", default="")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo-instruct")
+
+# Claude settings
+CLAUDE_API_KEY = env("CLAUDE_API_KEY", default="")
+CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-3-7-sonnet-20250219")
 
 UPLOADED_DOCUMENT_SIZE_LIMIT = env.int("UPLOADED_DOCUMENT_SIZE_LIMIT", default=10 * 1024 * 1024)
 USER_DOCUMENTS_NUMBER_LIMIT = env.int("USER_DOCUMENTS_NUMBER_LIMIT", default=10)
