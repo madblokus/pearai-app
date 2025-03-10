@@ -13,6 +13,13 @@ class ClaudeMessage(BaseModel):
     content: str
 
 
+class ClaudeToolUse(BaseModel):
+    id: str
+    name: str
+    input: Dict[str, Any]
+    output: Optional[Any] = None
+
+
 class ClaudeResponse(BaseModel):
     id: str
     type: str
@@ -22,6 +29,7 @@ class ClaudeResponse(BaseModel):
     usage: ClaudeUsage
     stop_reason: str
     stop_sequence: Optional[str] = None
+    tool_uses: Optional[List[ClaudeToolUse]] = None
 
 
 class ClaudeVSCodeResponse(BaseModel):
@@ -31,4 +39,21 @@ class ClaudeVSCodeResponse(BaseModel):
     content: str
     usage: ClaudeUsage
     stop_reason: str
+    tool_uses: Optional[List[ClaudeToolUse]] = None
     metadata: Optional[Dict[str, Any]] = None
+
+
+class ClaudeContentBlock(BaseModel):
+    """Content block for streaming responses"""
+    type: str
+    text: Optional[str] = None
+    source: Optional[Dict[str, Any]] = None
+
+
+class ClaudeStreamingUpdate(BaseModel):
+    """Update for streaming responses"""
+    type: str
+    message: Dict[str, Any]
+    index: int
+    content_block: Optional[ClaudeContentBlock] = None
+    delta: Optional[Dict[str, Any]] = None

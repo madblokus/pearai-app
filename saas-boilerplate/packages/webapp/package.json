@@ -16,6 +16,7 @@
     "type-check": "tsc --noEmit --project tsconfig.app.json"
   },
   "dependencies": {
+    "@sb/webapp-libs-claude-integration": "workspace:*",
     "intl": "^1.2.5",
     "lucide-react": "^0.378.0",
     "qrcode": "^1.5.3",

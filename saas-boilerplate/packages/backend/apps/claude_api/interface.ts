@@ -13,6 +13,28 @@ export interface CompletionRequest {
 	top_p?: number;
 	frequency_penalty?: number;
 	presence_penalty?: number;
+	tools?: Tool[];
+	tool_choice?: string | ToolChoice;
+	files?: string[];
+}
+
+export interface ToolChoice {
+	type: 'tool' | 'auto' | 'none';
+	tool?: {
+		name: string;
+	};
+}
+
+export interface Tool {
+	name: string;
+	description: string;
+	input_schema: Record<string, any>;
+}
+
+export interface ToolUse {
+	id: string;
+	name: string;
+	input: Record<string, any>;
 }
 
 export interface CompletionResponse {
@@ -20,6 +42,7 @@ export interface CompletionResponse {
 	completion: string;
 	model: string;
 	stop_reason: string;
+	tool_uses?: ToolUse[];
 	usage?: {
 		prompt_tokens: number;
 		completion_tokens: number;
@@ -32,6 +55,10 @@ export interface ClaudeModelInfo {
 	name: string;
 	max_tokens: number;
 	description: string;
+	context_window?: number;
+	supports_tools?: boolean;
+	supports_files?: boolean;
+	supports_vision?: boolean;
 }
 
 export interface MessageContent {
@@ -47,6 +74,21 @@ export interface MessageContent {
 export interface ChatMessage {
 	role: string;
 	content: string | MessageContent[];
+	tool_uses?: ToolUse[];
+}
+
+export interface StreamingMessageUpdate {
+	type: 'message_start' | 'content_block_start' | 'content_block_delta' | 'content_block_stop' | 'message_delta' | 'message_stop';
+	message: Partial<ChatMessage>;
+	index: number;
+	content_block?: {
+		type: string;
+		text?: string;
+	};
+	delta?: {
+		text?: string;
+		tool_uses?: ToolUse[];
+	};
 }
 
 export interface IClaudeClient {
@@ -63,6 +105,12 @@ export interface IClaudeClient {
 		messages: ChatMessage[],
 		options: CompletionRequest,
 	): AsyncGenerator<ChatMessage>;
+
+	// File handling methods
+	uploadFile?(file: File): Promise<string>;
+	
+	// Tool use methods
+	executeToolCall?(toolCall: ToolUse): Promise<any>;
 
 	// General methods similar to localhost server
 	getConfig(): Promise<{ configJson: string; configJs: string }>;

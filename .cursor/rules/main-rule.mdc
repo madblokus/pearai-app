@@ -1,0 +1,96 @@
+---
+description: Main description of project
+globs: 
+alwaysApply: false
+---
+# Project Rules for pearAI and SaaS Boilerplate
+
+## pearAI Project
+
+1. ROOT PATH: /Users/chris/Documents/GitHub/pearai-app-old/pearAI
+
+2. PROJECT STRUCTURE:
+   - src/: Core VSCode editor code
+   - extensions/: VSCode extensions including custom AI extensions
+   - extensions/pearai-submodule/: Main AI functionality 
+   - extensions/claude-django-bridge/: Integration with Django backend
+   - packages/: Additional packages
+   - packages/backend/: Backend support for AI functionality
+
+3. EXTENSION DEVELOPMENT:
+   - Follow VS Code extension development patterns
+   - Extensions are organized in the extensions/ directory
+   - Custom extensions include pearai-submodule and claude-django-bridge
+
+4. KEY FILES:
+   - Root: package.json, tsfmt.json
+   - Extensions: extensions/*/package.json
+
+5. VS CODE ARCHITECTURE:
+   - Build on VS Code's extensibility model
+   - Use TypeScript for extension development
+   - Extensions communicate with core editor through VS Code API
+
+## SaaS Boilerplate Project
+
+1. ROOT PATH: /Users/chris/Documents/GitHub/pearai-app-old/saas-boilerplate
+
+2. PACKAGE STRUCTURE:
+   - packages/webapp: Frontend application (React/TypeScript)
+   - packages/backend: Backend application (Django/Python)
+   - packages/workers: Background workers
+   - packages/webapp-libs: Frontend libraries used by webapp
+   - packages/internal: Internal tools and utilities
+   - packages/infra: Infrastructure code (AWS CDK)
+   - packages/contentful: CMS integration
+
+3. IMPORT PATTERNS:
+   - Frontend imports use TypeScript path aliases (e.g., '@sb/webapp-libs-mylib')
+   - Check tsconfig.base.json for path mappings
+
+4. KEY CONFIGURATION FILES:
+   - Root: 
+     - package.json, pnpm-workspace.yaml, nx.json, tsconfig.base.json
+   - Frontend: 
+     - packages/webapp/package.json, packages/webapp/vite.config.ts
+   - Backend: 
+     - packages/backend/pyproject.toml, packages/backend/config/
+
+5. LIBRARY PATTERNS:
+   - Frontend libraries follow the pattern in packages/webapp-libs/
+   - New libraries should be created using the generator: pnpm nx g @sb/tools:webapp-lib
+
+6. DOCUMENTATION STRUCTURE:
+   - Documentation is in packages/internal/docs/docs/
+   - Sections include: introduction, getting-started, working-with-sb, api-reference
+
+7. FEATURE ORGANIZATION:
+   - Each major feature has its own directory structure
+   - Features include: auth, payments, subscriptions, emails, multi-tenancy, CMS integration
+
+8. TESTING STRUCTURE:
+   - Frontend tests are co-located with components
+   - Backend tests are in packages/backend/tests/
+
+9. ENVIRONMENT CONFIGURATION:
+   - Environment variables are stored in .env files
+   - Shared variables are in .env.shared files
+
+10. DEPLOYMENT APPROACH:
+    - Project uses AWS infrastructure defined in CDK
+    - Deployments are configured in bitbucket-pipelines.yml
+
+11. DOCKER REQUIREMENTS:
+    - Docker is required to run the application
+    - Docker services are defined in docker-compose.yml
+    - Docker should be running before executing commands like `pnpm saas up`
+
+## Cross-Project Integration
+
+1. INTEGRATION POINTS:
+   - claude-django-bridge extension in pearAI may connect to Django backend in saas-boilerplate
+   - Maintain consistency between AI extension requirements and backend API
+
+2. DEVELOPMENT WORKFLOW:
+   - When making changes that affect both projects, test integration points thoroughly
+   - Consider impact of backend API changes on claude-django-bridge extension

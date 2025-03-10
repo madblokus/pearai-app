@@ -1,51 +1,18 @@
 {
   "run": {
-    "command": "nx run core:docker-compose:up",
-    "startTime": "2025-02-25T16:36:27.494Z",
-    "endTime": "2025-02-25T16:37:05.929Z",
+    "command": "nx run webapp:start",
+    "startTime": "2025-03-10T02:39:34.583Z",
+    "endTime": "2025-03-10T02:39:47.347Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "core:docker-create-volumes",
-      "target": "docker-create-volumes",
-      "projectName": "core",
-      "hash": "2794935749215319123",
-      "startTime": "2025-02-25T16:36:27.498Z",
-      "endTime": "2025-02-25T16:36:27.567Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "core:setup-env",
-      "target": "setup-env",
-      "projectName": "core",
-      "hash": "12044202407083298801",
-      "startTime": "2025-02-25T16:36:27.498Z",
-      "endTime": "2025-02-25T16:36:28.072Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "core:setup",
-      "target": "setup",
-      "projectName": "core",
-      "hash": "14234528702415118687",
-      "startTime": "2025-02-25T16:36:28.072Z",
-      "endTime": "2025-02-25T16:36:28.085Z",
-      "params": "",
-      "cacheStatus": "local-cache-hit",
-      "status": 0
-    },
-    {
-      "taskId": "core:docker-compose:up",
-      "target": "docker-compose:up",
-      "projectName": "core",
-      "hash": "5264213619031846387",
-      "startTime": "2025-02-25T16:36:28.086Z",
-      "endTime": "2025-02-25T16:37:05.928Z",
+      "taskId": "webapp:start",
+      "target": "start",
+      "projectName": "webapp",
+      "hash": "12396276679144886593",
+      "startTime": "2025-03-10T02:39:34.587Z",
+      "endTime": "2025-03-10T02:39:47.347Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

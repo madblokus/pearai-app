@@ -1,0 +1,28 @@
+{
+  "name": "@sb/webapp-libs-claude-integration",
+  "version": "0.0.1",
+  "description": "Claude 3.7 integration components",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./src/components/*": {
+      "import": "./src/components/*/index.ts",
+      "require": "./src/components/*/index.ts"
+    }
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit --project tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "dependencies": {
+    "@sb/webapp-core": "workspace:*"
+  }
+} 

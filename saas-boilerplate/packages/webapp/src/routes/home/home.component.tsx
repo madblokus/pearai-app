@@ -10,6 +10,7 @@ import { useGenerateTenantPath } from '@sb/webapp-tenants/hooks';
 import { AlertCircle, ArrowUpRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { ClaudeChat } from '@sb/webapp-libs-claude-integration/components/claudeChat';
 
 import { RoutesConfig } from '../../app/config/routes';
 
@@ -120,60 +121,71 @@ export const Home = () => {
   );
 
   return (
-    <PageLayout className="lg:max-w-4xl">
-      <Helmet
-        title={intl.formatMessage({
-          defaultMessage: 'Homepage',
-          id: 'Home / page title',
-        })}
-      />
+    <>
+      <Helmet>
+        <title>
+          {intl.formatMessage({ defaultMessage: "Home page", id: "Home / page title" })}
+        </title>
+      </Helmet>
 
-      <PageHeadline
-        header={<FormattedMessage defaultMessage="Dashboard" id="Home / header" />}
-        subheader={
-          <FormattedMessage
-            defaultMessage="Welcome! You're viewing your personal application dashboard example."
-            id="Home / subheading"
-          />
-        }
-      />
-
-      <Alert variant="info">
-        <AlertCircle className="h-4 w-4" />
-        <AlertTitle>Heads up!</AlertTitle>
-        <AlertDescription className="space-y-4">
-          <div>
-            Each feature you see here is a module demonstrating the versatility and usability of the SaaS Boilerplate.
-            Please remember, these modules are simply examples. You are encouraged to customize, adjust, and modify each
-            module to best fit your application's needs.
-          </div>
-          <div>
-            <strong>For further assistance:</strong>
-            <ol>
-              <li>
-                <a
-                  target="_blank"
-                  className="underline"
-                  href="https://github.com/apptension/saas-boilerplate"
-                  rel="noreferrer"
-                >
-                  Visit our GitHub repository
-                </a>
-              </li>
-              <li>
-                <a target="_blank" className="underline" href="https://docs.demo.saas.apptoku.com/" rel="noreferrer">
-                  Check out the SB Documentation
-                </a>
-              </li>
-            </ol>
-          </div>
-          <div>Remember, the SaaS Boilerplate is your starting point - make it your own!</div>
-        </AlertDescription>
-      </Alert>
-
-      <div className="grid w-full grid-cols-1 gap-[1px] bg-muted md:grid-cols-2">
-        {dashboardItems.map((item, key) => renderItem(item, key))}
+      <div className="container mx-auto px-4 py-8">
+        <h2 className="text-2xl font-bold mb-6">
+          <FormattedMessage defaultMessage="Claude 3.7 Integration Demo" id="Home / heading" />
+        </h2>
+        
+        <div className="max-w-4xl mx-auto">
+          <ClaudeChat />
+        </div>
       </div>
-    </PageLayout>
+
+      <PageLayout className="lg:max-w-4xl">
+        <PageHeadline
+          header={<FormattedMessage defaultMessage="Dashboard" id="Home / header" />}
+          subheader={
+            <FormattedMessage
+              defaultMessage="Welcome! You're viewing your personal application dashboard example."
+              id="Home / subheading"
+            />
+          }
+        />
+
+        <Alert variant="info">
+          <AlertCircle className="h-4 w-4" />
+          <AlertTitle>Heads up!</AlertTitle>
+          <AlertDescription className="space-y-4">
+            <div>
+              Each feature you see here is a module demonstrating the versatility and usability of the SaaS Boilerplate.
+              Please remember, these modules are simply examples. You are encouraged to customize, adjust, and modify each
+              module to best fit your application's needs.
+            </div>
+            <div>
+              <strong>For further assistance:</strong>
+              <ol>
+                <li>
+                  <a
+                    target="_blank"
+                    className="underline"
+                    href="https://github.com/apptension/saas-boilerplate"
+                    rel="noreferrer"
+                  >
+                    Visit our GitHub repository
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" className="underline" href="https://docs.demo.saas.apptoku.com/" rel="noreferrer">
+                    Check out the SB Documentation
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div>Remember, the SaaS Boilerplate is your starting point - make it your own!</div>
+          </AlertDescription>
+        </Alert>
+
+        <div className="grid w-full grid-cols-1 gap-[1px] bg-muted md:grid-cols-2">
+          {dashboardItems.map((item, key) => renderItem(item, key))}
+        </div>
+      </PageLayout>
+    </>
   );
 };

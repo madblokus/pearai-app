@@ -126,6 +126,68 @@
         "implicitDependencies": []
       }
     },
+    "@sb/webapp-libs-claude-integration": {
+      "name": "@sb/webapp-libs-claude-integration",
+      "type": "lib",
+      "data": {
+        "root": "packages/webapp-libs/claude-integration",
+        "targets": {
+          "lint": {
+            "executor": "nx:run-script",
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/eslint.config.js"
+            ],
+            "cache": true,
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "cache": true,
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "test:watch": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test:watch"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "sourceRoot": "packages/webapp-libs/claude-integration",
+        "name": "@sb/webapp-libs-claude-integration",
+        "projectType": "library",
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
     "webapp-api-client": {
       "name": "webapp-api-client",
       "type": "lib",
@@ -35806,6 +35868,13 @@
         "type": "static"
       }
     ],
+    "@sb/webapp-libs-claude-integration": [
+      {
+        "source": "@sb/webapp-libs-claude-integration",
+        "target": "webapp-core",
+        "type": "static"
+      }
+    ],
     "webapp-api-client": [
       {
         "source": "webapp-api-client",
@@ -36076,6 +36145,11 @@
       {
         "source": "webapp",
         "target": "infra-shared",
+        "type": "static"
+      },
+      {
+        "source": "webapp",
+        "target": "@sb/webapp-libs-claude-integration",
         "type": "static"
       },
       {
