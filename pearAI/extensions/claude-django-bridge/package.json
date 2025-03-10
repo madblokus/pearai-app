@@ -1,0 +1,33 @@
+{
+  "name": "claude-django-bridge",
+  "displayName": "Claude Django Bridge",
+  "description": "Connect pearAI to Claude API served by Django backend",
+  "version": "0.1.0",
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "claude-django-bridge.register",
+        "title": "Claude Django Bridge: Register Provider"
+      }
+    ]
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.73.0",
+    "typescript": "^5.0.2"
+  }
+} 

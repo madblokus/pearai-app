@@ -1,6 +1,7 @@
 from django.urls import path, include
 from django.urls import re_path
 from social_django import views as django_social_views
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 from . import views
 
@@ -21,6 +22,7 @@ user_patterns = [
     path("token-refresh/", views.CookieTokenRefreshView.as_view(), name="jwt_token_refresh"),
     path("logout/", views.LogoutView.as_view(), name="logout"),
     path('social/', include((social_patterns, 'social'), namespace='social')),
+    path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
 ]
 
 urlpatterns = [path("auth/", include(user_patterns))]

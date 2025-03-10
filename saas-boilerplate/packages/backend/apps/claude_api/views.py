@@ -285,8 +285,7 @@ def stream_response(request):
                     "model": CLAUDE_MODEL,
                     "messages": messages,
                     "max_tokens": max_tokens,
-                    "temperature": temperature,
-                    "stream": True
+                    "temperature": temperature
                 }
                 
                 if tools:
